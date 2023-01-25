@@ -20,7 +20,7 @@ const auth = async (req, res, next) => {
         // The user profile is then fetched
         const user = await client.query(`SELECT * FROM users WHERE email=$1 AND tokens = $2`,[decoded.pass,[token]])
 
-            //Authentication is finally done
+        //Authentication is finally done
         if(user.rowCount === 0) {
             throw Error('Issue with authentication')
         }
