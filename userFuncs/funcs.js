@@ -1,5 +1,6 @@
 const crypto = require('crypto')
 
+// This function hashes user password before storing in the database
 const hash = (password) => {
 
     var hash = crypto.createHash('sha256')
